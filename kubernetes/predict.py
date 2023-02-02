@@ -30,6 +30,8 @@ def my_request():
     now = datetime.now()
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
     collections = db.model_request
+
+    # writing the request
     user_request = collections.insert_one({"API_Key":api_key, 'Request_Time':dt_string, 'Request_Type': 'Model1', 'Request_Status':'Pending'})
     request_id = user_request.inserted_id
     # doing prediction
@@ -40,9 +42,6 @@ def my_request():
         "Placement_Probability" : float(preds),
         "Placement" :bool(placement)
     }
-
-    import time
-    # time.sleep(10)
     
     new_values = {"$set":{'Request_Status':'Complete'}}
     filter = {'_id': request_id}
@@ -51,6 +50,7 @@ def my_request():
 
     collections.update_one(filter, new_values)
 
+    # writing the result
     collections = db.model_result
     collections.insert_one({"Resquest_ID":str(request_id), "Result":result})
 

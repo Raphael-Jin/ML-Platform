@@ -15,7 +15,7 @@
 	-- routes			# url -> resource on the host
 	-- views			# resource on the host
 		-- ai-model
-			--	record.js	# access the mongo db to get the user's usage of different model
+			--	record.js	# Front-end(React.js), back-end(Node.js) communication, to access the 
 	...
 	
 	-- components
@@ -27,6 +27,7 @@
 	
 
 -- database
+	-- sqlite.sql
 
 -- backend
 	-- db
