@@ -14,7 +14,7 @@ const documentation = {
             id: 'documentation',
             title: 'Documentation',
             type: 'item',
-            url: 'https://github.com/Raphael-Jin',
+            url: 'https://github.com/Raphael-Jin/ML-Platform/blob/main/Usage.md',
             icon: icons.IconHelp,
             external: true,
             target: true

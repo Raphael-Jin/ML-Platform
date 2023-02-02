@@ -14,6 +14,8 @@
 	-- menu-items		# home page index and the correspond child info (url)
 	-- routes			# url -> resource on the host
 	-- views			# resource on the host
+		-- ai-model
+			--	record.js	# access the mongo db to get the user's usage of different model
 	...
 	
 	-- components
@@ -22,11 +24,16 @@
 		-- UsersContext.js	# call database.js to get users, add users
 	-- hooks
 		-- useSqlite.js		# setup databse using hook
+	
 
 -- database
 
 -- backend
-	server.js			# Website Node.Js server, comunication with MongoDB and SQLite
+	-- db
+		-- conn.js 		# connection to the database
+	-- routes
+		-- record.js		# handle different record
+	-- server.js			# Website Node.Js server, comunication with MongoDB and SQLite
 ```
 
 

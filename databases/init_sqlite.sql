@@ -1,0 +1,1 @@
+CREATE TABLE Account_Info (Email varchar(30) primary key, Password varchar(30) NOT NULL, Account_Balance real DEFAULT 0);

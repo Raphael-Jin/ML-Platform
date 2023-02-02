@@ -1,8 +1,8 @@
 // assets
-import { IconDashboard, IconBrandChrome, IconBox, IconHelp } from '@tabler/icons';
+import { IconBucketDroplet, IconDashboard, IconBrandChrome, IconBox, IconHelp } from '@tabler/icons';
 
 // constant
-const icons = { IconDashboard, IconBrandChrome, IconBox, IconHelp };
+const icons = { IconBucketDroplet, IconDashboard, IconBrandChrome, IconBox, IconHelp };
 
 // ==============================|| DASHBOARD MENU ITEMS ||============================== //
 
@@ -12,18 +12,18 @@ const dashboard = {
     children: [
         {
             id: 'default',
-            title: 'Dashboard',
+            title: 'Usage',
             type: 'item',
             url: '/dashboard/default',
-            icon: icons.IconDashboard,
+            icon: icons.IconBucketDroplet,
             breadcrumbs: false
         },
         {
             id: 'model',
-            title: 'AI Model',
+            title: 'Dashboard',
             type: 'item',
             url: '/ai-model',
-            icon: icons.IconBox,
+            icon: icons.IconDashboard,
             breadcrumbs: false
         },
         {

@@ -7,7 +7,7 @@ import payment from './payment';
 // ==============================|| MENU ITEMS ||============================== //
 
 const menuItems = {
-    items: [dashboard, pages, utilities, documentation, payment]
+    items: [dashboard, pages, documentation, payment]
 };
 
 export default menuItems;

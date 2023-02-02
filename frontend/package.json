@@ -3,6 +3,7 @@
     "version": "3.3.0",
     "private": true,
     "homepage": "https://berrydashboard.io/free",
+    "proxy": "http://127.0.0.1:3300/",
     "dependencies": {
         "@emotion/cache": "^11.9.3",
         "@emotion/react": "^11.9.3",
@@ -23,6 +24,7 @@
         "prop-types": "^15.8.1",
         "react": "^18.2.0",
         "react-apexcharts": "^1.4.0",
+        "react-code-blocks": "^0.0.9-0",
         "react-device-detect": "^2.2.2",
         "react-dom": "^18.2.0",
         "react-native-web": "^0.18.12",
@@ -31,7 +33,7 @@
         "react-router": "6.3.0",
         "react-router-dom": "6.3.0",
         "react-scripts": "^5.0.1",
-        "reactflow": "^11.5.1",
+        "reactflow": "^11.5.3",
         "redux": "^4.2.0",
         "yup": "^0.32.11"
     },

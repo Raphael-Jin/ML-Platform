@@ -18,8 +18,8 @@ client = MongoClient('localhost', 27017)
 # print(client.list_database_names())
 
 
-@app.route('/predict',methods=['POST'])
-def predict():
+@app.route('/request',methods=['POST'])
+def my_request():
     candidate = request.get_json()
     api_key = candidate[0]["api_key"]
     print(candidate)
@@ -52,9 +52,20 @@ def predict():
     collections.update_one(filter, new_values)
 
     collections = db.model_result
-    collections.insert_one({"Resquest_ID":request_id, "Result":result})
+    collections.insert_one({"Resquest_ID":str(request_id), "Result":result})
 
     return jsonify({"request_id":str(request_id)})
+
+
+@app.route('/get-result',methods=['POST'])
+def predict():
+    candidate = request.get_json()
+    id = candidate[0]["RequestId"]
+    collections = db.model_result
+    res = collections.find({"Resquest_ID":id})
+    ans = list(res)[0]
+    del ans["_id"]
+    return jsonify(ans)
 
 if __name__ == "__main__":
     app.run(debug=True,host='0.0.0.0',port=9696)

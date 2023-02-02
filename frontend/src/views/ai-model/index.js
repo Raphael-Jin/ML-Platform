@@ -3,6 +3,7 @@ import { Typography } from '@mui/material';
 
 // project imports
 import MainCard from 'ui-component/cards/MainCard';
+import RecordList from "./record";
 
 import ReactFlow, {
     ReactFlowProvider,
@@ -17,6 +18,7 @@ const AIModel = () => (
     <div className="App" style={{ height: '100vh' }}>
         {/* <DnDFlow /> */}
         <p>Those are the ai models</p>
+        <RecordList />
     </div>
 );
 

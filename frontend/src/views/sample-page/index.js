@@ -13,10 +13,18 @@ import ReactFlow, {
   } from 'reactflow';
 // ==============================|| SAMPLE PAGE ||============================== //
 
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+
+
 const SamplePage = () => (
     <div className="App" style={{ height: '100vh' }}>
         {/* <DnDFlow /> */}
-        <p>Hello</p>
+        <React.StrictMode>
+            <App />
+        </React.StrictMode>
     </div>
 );
 
