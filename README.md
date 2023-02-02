@@ -35,11 +35,11 @@ SQLite
 
 Account_Info
 
-| Email (varchar 30) | Password (varchar 30) | Account_Balance   |
-| ------------------ | --------------------- | ----------------- |
-| Adam@usc.edu       | "Aa123456"            | default 0         |
-| ...                |                       |                   |
-| The constraint     | need to be            | futher considered |
+| Email (varchar 30) | Password (varchar 30) | API_Key(uuid)                        | Account_Balance |
+| ------------------ | --------------------- | ------------------------------------ | --------------- |
+| Adam@usc.edu       | "Aa123456"            | b6f97a69-428b-4e74-862d-4ad22d7e0de8 | default 0       |
+| ...                |                       |                                      |                 |
+| The constraint     | need to be            | further considered                   |                 |
 
 ```sqlite
 CREATE TABLE Account_Info (Email varchar(30) primary key, Password varchar(30) NOT NULL, Account_Balance real DEFAULT 0);
@@ -53,10 +53,10 @@ MongoDB:
 
 model_request
 
-| Request_id                 | Email        | Request_Time          | Request_Type | Request_Status |
-| -------------------------- | ------------ | --------------------- | ------------ | -------------- |
-| "63d9c7447fb0edda4d6b0172" | Adam@usc.edu | "31/01/2023 21:58:58" | Model1       | Pending/Done   |
-|                            |              |                       |              |                |
+| Request_id                 | API_Key                              | Request_Time          | Request_Type | Request_Status |
+| -------------------------- | ------------------------------------ | --------------------- | ------------ | -------------- |
+| "63d9c7447fb0edda4d6b0172" | b6f97a69-428b-4e74-862d-4ad22d7e0de8 | "31/01/2023 21:58:58" | Model1       | Pending/Done   |
+|                            |                                      |                       |              |                |
 
 model_result
 
@@ -85,13 +85,3 @@ collections = db.model_request
 for x in collections.find():
   print(x)
 ```
-
-
-
-![image-20230201122936042](C:\Users\jh628\AppData\Roaming\Typora\typora-user-images\image-20230201122936042.png)
-
-
-
-
-
-![image-20230201122927806](C:\Users\jh628\AppData\Roaming\Typora\typora-user-images\image-20230201122927806.png)
