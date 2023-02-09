@@ -29,7 +29,7 @@ response = requests.post(url=url,json=candidate).json()
 print('Your Request id: ' + response["request_id"])
 
 # get result
-id = response["request_id"]
-request_id = [{"RequestId": id}]
-url2 =  "http://127.0.0.1:6000/get-result"
-print(f'Get Result By Request id {requests.post(url=url2,json=request_id).json()}')
+# id = response["request_id"]
+# request_id = [{"RequestId": id}]
+# url2 =  "http://127.0.0.1:6000/get-result"
+# print(f'Get Result By Request id {requests.post(url=url2,json=request_id).json()}')

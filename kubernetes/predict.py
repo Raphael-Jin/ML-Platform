@@ -2,6 +2,7 @@ from flask import Flask
 from flask import request,jsonify
 from pymongo import MongoClient
 import pickle
+import sklearn
     
 #loading the model 
 with open("project_one_model.pkl","rb") as f_in:

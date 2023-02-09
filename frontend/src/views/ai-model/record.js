@@ -1,5 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
+// import * as React from 'react';
+// import Table from '@mui/material/Table';
+// import TableBody from '@mui/material/TableBody';
+// import TableCell from '@mui/material/TableCell';
+// import TableContainer from '@mui/material/TableContainer';
+// import TableHead from '@mui/material/TableHead';
+// import TableRow from '@mui/material/TableRow';
+// import Paper from '@mui/material/Paper';
  
 const Record = (props) => (
  <tr>
@@ -9,13 +18,13 @@ const Record = (props) => (
    <td>{props.record.Request_Type}</td>
    <td>{props.record.Request_Status}</td>
    <td>
-     <Link className="btn btn-link" to={`/edit/${props.record._id}`}>Edit</Link> |
+     <Link className="btn btn-link" to={`/edit/${props.record._id}`}>Detail</Link> |
      <button className="btn btn-link"
        onClick={() => {
          props.deleteRecord(props.record._id);
        }}
      >
-       Delete
+       Cancel Request
      </button>
    </td>
  </tr>
@@ -71,7 +80,7 @@ export default function RecordList() {
  return (
    <div>
      <h3>Record List</h3>
-     <table className="table table-striped" style={{ marginTop: 20 }}>
+     <table className="table table-striped" WIDTH="100%" style={{ marginTop: 20}}>
        <thead>
          <tr>
            <th>id</th>
