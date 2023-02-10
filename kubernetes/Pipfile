@@ -9,6 +9,7 @@ flask = "*"
 requests = "*"
 scikit-learn = "*"
 gunicorn = "*"
+pymongo = "*"
 
 [dev-packages]
 

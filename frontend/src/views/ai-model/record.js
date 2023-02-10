@@ -80,7 +80,7 @@ export default function RecordList() {
  return (
    <div>
      <h3>Record List</h3>
-     <table className="table table-striped" WIDTH="100%" style={{ marginTop: 20}}>
+     <table className="table table-striped" width={"100%"} style={{ marginTop: 20}}>
        <thead>
          <tr>
            <th>id</th>
@@ -90,7 +90,7 @@ export default function RecordList() {
            <th>Request_Status</th>
          </tr>
        </thead>
-       <tbody>{recordList()}</tbody>
+       <tbody align = "center" >{recordList()}</tbody>
      </table>
    </div>
  );

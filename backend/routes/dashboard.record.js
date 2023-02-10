@@ -6,12 +6,11 @@ const express = require("express");
 const recordRoutes = express.Router();
  
 // This will help us connect to the database
-const dbo = require("../db/conn");
+const dbo = require("../db/mongo_conn");
  
 // This help convert the id from string to ObjectId for the _id.
 const ObjectId = require("mongodb").ObjectId;
- 
- 
+
 // This section will help you get a list of all the records.
 recordRoutes.route("/record").get(async function (req, res) {
     const cursor = await dbo.getDb().collection("model_request").find({});
