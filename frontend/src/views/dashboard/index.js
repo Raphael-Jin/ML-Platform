@@ -14,7 +14,7 @@ import ReactFlow, {
   } from 'reactflow';
 // ==============================|| SAMPLE PAGE ||============================== //
 
-const AIModel = () => (
+const Dashboard = () => (
     <div className="App" style={{ height: '100vh' }}>
         {/* <DnDFlow /> */}
         <p>Those are the ai models</p>
@@ -22,4 +22,4 @@ const AIModel = () => (
     </div>
 );
 
-export default AIModel;
+export default Dashboard;

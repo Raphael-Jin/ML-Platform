@@ -116,7 +116,7 @@ const DnDFlow = () => {
   const argsItemsLabel =
     Object.keys(args).length === 0 ? null : (
       <div>
-        <label>Args: </label>
+          Args:
         <br />
       </div>
     );
@@ -138,7 +138,7 @@ const DnDFlow = () => {
   const kwargsItemsLabel =
     Object.keys(kwargs).length === 0 ? null : (
       <div>
-        <label>Kwargs: </label>
+        Kwargs:
         <br />
       </div>
     );
@@ -231,14 +231,6 @@ const DnDFlow = () => {
                 {kwargsItemsLabel}
                 {kwargsItems}
                 {dimLabel}
-                <div className="updatenode__checkboxwrapper">
-                  <label>hidden:</label>
-                  <input
-                    type="checkbox"
-                    checked={nodeHidden}
-                    onChange={(evt) => setNodeHidden(evt.target.checked)}
-                  />
-                </div>
               </div>
             </ReactFlow>
           </div>

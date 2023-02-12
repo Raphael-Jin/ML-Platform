@@ -4,8 +4,8 @@ import { lazy } from 'react';
 import MainLayout from 'layout/MainLayout';
 import Loadable from 'ui-component/Loadable';
 
-// dashboard routing
-const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
+// Usage routing
+const Usage = Loadable(lazy(() => import('views/usage')));
 
 // utilities routing
 const UtilsTypography = Loadable(lazy(() => import('views/utilities/Typography')));
@@ -18,7 +18,7 @@ const UtilsTablerIcons = Loadable(lazy(() => import('views/utilities/TablerIcons
 const SamplePage = Loadable(lazy(() => import('views/sample-page')));
 
 // add here
-const AIModel = Loadable(lazy(() => import('views/ai-model')));
+const Dashboard = Loadable(lazy(() => import('views/dashboard')));
 const Payment = Loadable(lazy(() => import('views/payment')));
 
 // ==============================|| MAIN ROUTING ||============================== //
@@ -29,16 +29,11 @@ const MainRoutes = {
     children: [
         {
             path: '/',
-            element: <DashboardDefault />
+            element: <Usage />
         },
         {
-            path: 'dashboard',
-            children: [
-                {
-                    path: 'default',
-                    element: <DashboardDefault />
-                }
-            ]
+            path: 'usage',
+            element: <Usage />
         },
         {
             path: 'utils',
@@ -90,8 +85,8 @@ const MainRoutes = {
             element: <SamplePage />
         },
         {
-            path: 'ai-model',
-            element: <AIModel />
+            path: 'dashboard',
+            element: <Dashboard />
         },
         {
             path: 'payment',

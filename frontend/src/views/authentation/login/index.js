@@ -1,23 +1,24 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 
 // material-ui
-import { useTheme } from '@mui/material/styles';
-import { Divider, Grid, Stack, Typography, useMediaQuery } from '@mui/material';
+import { useTheme } from '@material-ui/core';
+import { Divider, Grid, Stack, Typography, useMediaQuery } from '@material-ui/core';
 
 // project imports
-import AuthWrapper1 from '../AuthWrapper1';
-import AuthCardWrapper from '../AuthCardWrapper';
-import AuthLogin from '../auth-forms/AuthLogin';
-import Logo from 'ui-component/Logo';
-import AuthFooter from 'ui-component/cards/AuthFooter';
+import AuthWrapper1 from './../AuthWrapper1';
+import Logo from './../../../../ui-component/Logo';
+import AuthCardWrapper from './../AuthCardWrapper';
+import RestLogin from './RestLogin';
+import AuthFooter from './../../../../ui-component/cards/AuthFooter';
 
 // assets
 
-// ================================|| AUTH3 - LOGIN ||================================ //
+//================================|| LOGIN MAIN ||================================//
 
 const Login = () => {
     const theme = useTheme();
-    const matchDownSM = useMediaQuery(theme.breakpoints.down('md'));
+    const matchDownSM = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <AuthWrapper1>
@@ -28,9 +29,9 @@ const Login = () => {
                             <AuthCardWrapper>
                                 <Grid container spacing={2} alignItems="center" justifyContent="center">
                                     <Grid item sx={{ mb: 3 }}>
-                                        <Link to="#">
+                                        <RouterLink to="#">
                                             <Logo />
-                                        </Link>
+                                        </RouterLink>
                                     </Grid>
                                     <Grid item xs={12}>
                                         <Grid
@@ -48,11 +49,7 @@ const Login = () => {
                                                     >
                                                         Hi, Welcome Back
                                                     </Typography>
-                                                    <Typography
-                                                        variant="caption"
-                                                        fontSize="16px"
-                                                        textAlign={matchDownSM ? 'center' : 'inherit'}
-                                                    >
+                                                    <Typography variant="caption" fontSize="16px" textAlign={matchDownSM ? 'center' : ''}>
                                                         Enter your credentials to continue
                                                     </Typography>
                                                 </Stack>
@@ -60,7 +57,7 @@ const Login = () => {
                                         </Grid>
                                     </Grid>
                                     <Grid item xs={12}>
-                                        <AuthLogin />
+                                        <RestLogin />
                                     </Grid>
                                     <Grid item xs={12}>
                                         <Divider />
@@ -68,12 +65,12 @@ const Login = () => {
                                     <Grid item xs={12}>
                                         <Grid item container direction="column" alignItems="center" xs={12}>
                                             <Typography
-                                                component={Link}
-                                                to="/pages/register/register3"
+                                                component={RouterLink}
+                                                to="/register"
                                                 variant="subtitle1"
                                                 sx={{ textDecoration: 'none' }}
                                             >
-                                                Don&apos;t have an account?
+                                                Don't have an account?
                                             </Typography>
                                         </Grid>
                                     </Grid>

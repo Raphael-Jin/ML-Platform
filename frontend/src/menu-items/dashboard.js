@@ -14,7 +14,7 @@ const dashboard = {
             id: 'default',
             title: 'Usage',
             type: 'item',
-            url: '/dashboard/default',
+            url: '/usage',
             icon: icons.IconBucketDroplet,
             breadcrumbs: false
         },
@@ -22,7 +22,7 @@ const dashboard = {
             id: 'model',
             title: 'Dashboard',
             type: 'item',
-            url: '/ai-model',
+            url: '/dashboard',
             icon: icons.IconDashboard,
             breadcrumbs: false
         },
