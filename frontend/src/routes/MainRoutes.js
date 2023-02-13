@@ -3,6 +3,7 @@ import { lazy } from 'react';
 // project imports
 import MainLayout from 'layout/MainLayout';
 import Loadable from 'ui-component/Loadable';
+import AuthGuard from 'utils/route-guard/AuthGuard';
 
 // Usage routing
 const Usage = Loadable(lazy(() => import('views/usage')));
@@ -25,7 +26,11 @@ const Payment = Loadable(lazy(() => import('views/payment')));
 
 const MainRoutes = {
     path: '/',
-    element: <MainLayout />,
+    element: (
+        <AuthGuard>
+            <MainLayout />
+        </AuthGuard>
+    ),
     children: [
         {
             path: '/',

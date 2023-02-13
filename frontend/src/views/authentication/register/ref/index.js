@@ -6,17 +6,17 @@ import { useTheme } from '@material-ui/core';
 import { Divider, Grid, Stack, Typography, useMediaQuery } from '@material-ui/core';
 
 // project imports
-import AuthWrapper1 from './../AuthWrapper1';
-import Logo from './../../../../ui-component/Logo';
-import AuthCardWrapper from './../AuthCardWrapper';
-import RestLogin from './RestLogin';
-import AuthFooter from './../../../../ui-component/cards/AuthFooter';
+import AuthWrapper1 from '../AuthWrapper1';
+import AuthCardWrapper from '../AuthCardWrapper';
+import Logo from '../../../../ui-component/Logo';
+import RestRegister from './RestRegister';
+import AuthFooter from '../../../../ui-component/cards/AuthFooter';
 
 // assets
 
-//================================|| LOGIN MAIN ||================================//
+//===============================|| AUTH3 - REGISTER ||===============================//
 
-const Login = () => {
+const Register = () => {
     const theme = useTheme();
     const matchDownSM = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -47,7 +47,7 @@ const Login = () => {
                                                         gutterBottom
                                                         variant={matchDownSM ? 'h3' : 'h2'}
                                                     >
-                                                        Hi, Welcome Back
+                                                        Sign up
                                                     </Typography>
                                                     <Typography variant="caption" fontSize="16px" textAlign={matchDownSM ? 'center' : ''}>
                                                         Enter your credentials to continue
@@ -57,7 +57,7 @@ const Login = () => {
                                         </Grid>
                                     </Grid>
                                     <Grid item xs={12}>
-                                        <RestLogin />
+                                        <RestRegister />
                                     </Grid>
                                     <Grid item xs={12}>
                                         <Divider />
@@ -66,11 +66,11 @@ const Login = () => {
                                         <Grid item container direction="column" alignItems="center" xs={12}>
                                             <Typography
                                                 component={RouterLink}
-                                                to="/register"
+                                                to="/login"
                                                 variant="subtitle1"
                                                 sx={{ textDecoration: 'none' }}
                                             >
-                                                Don't have an account?
+                                                Have an account?
                                             </Typography>
                                         </Grid>
                                     </Grid>
@@ -87,4 +87,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
