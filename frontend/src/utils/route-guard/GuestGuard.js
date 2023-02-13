@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 // project imports
 import config from '../../config';
@@ -15,9 +15,10 @@ import config from '../../config';
 const GuestGuard = ({ children }) => {
     const account = useSelector((state) => state.account);
     const { isLoggedIn } = account;
+    const navigate = useNavigate();
 
     if (isLoggedIn) {
-        return <Redirect to={config.defaultPath} />;
+        navigate(config.defaultPath);
     }
 
     return children;
