@@ -1,6 +1,6 @@
 # ML-Platform
 
-
+![alt text](https://github.com/Raphael-Jin/ML-Platform/blob/main/ML-Platform-Architecture.jpg)
 
 ```
 -- kubenetes
